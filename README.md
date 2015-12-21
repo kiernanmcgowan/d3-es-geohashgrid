@@ -2,6 +2,8 @@
 
 A reusable d3 chart to display data from an [elasticsearch GeoHash grid Aggregation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-geohashgrid-aggregation.html).
 
+![d3-es-geohashgrid](https://raw.githubusercontent.com/kiernanmcgowan/d3-es-geohashgrid/master/img/example.png)
+
 ## Installing
 
 If you use NPM, `npm install d3-es-geohashgrid`. Otherwise, download the [latest release](https://github.com/kiernanmcgowan/d3-es-geohashgrid/releases/latest).
