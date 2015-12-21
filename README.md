@@ -57,12 +57,12 @@ d3.json('./world-50m.json', function(error, topology) {
 
 ## API Reference
 
-### d3_es_geohashgrid().geohashgrid()
+### d3_es_geohashgrid.geohashgrid()
 
 Returns a function callable by d3 to render a world chart of locations from the geohashgrid aggregation.
 
 ```js
-var chart = d3_es_geohashgrid().geohashgrid();
+var chart = d3_es_geohashgrid.geohashgrid();
 ```
 
 #### .width([val])
