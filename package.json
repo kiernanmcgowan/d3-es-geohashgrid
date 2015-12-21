@@ -1,0 +1,36 @@
+{
+  "name": "d3-es-geohashgrid",
+  "version": "0.0.1",
+  "description": "A drop in chart to display information from elasticsearch's geohashgrid aggregation",
+  "keywords": [
+    "d3",
+    "elasticsearch",
+    "geohash"
+  ],
+  "license": "MIT",
+  "main": "build/d3-es-geohashgrid.js",
+  "jsnext:main": "index",
+  "homepage": "https://github.com/kiernanmcgowan/d3-es-geohashgrid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kiernanmcgowan/d3-es-geohashgrid.git"
+  },
+  "scripts": {
+    "build": "mkdir -p build && node -e 'process.stdout.write(\"var version = \\\"\" + require(\"./package.json\").version + \"\\\"; export * from \\\"../index\\\"; export {version};\");' > build/bundle.js && rollup -c rollup.config.js -f umd -u d3-es-geohashgrid -n d3_es_geohashgrid -o build/d3-es-geohashgrid.js -- build/bundle.js",
+    "test": "faucet `find test -name '*-test.js'`",
+    "prepublish": "npm run test && uglifyjs build/d3-es-geohashgrid.js -c -m -o build/d3-es-geohashgrid.min.js && rm -f build/d3-es-geohashgrid.zip && zip -j build/d3-es-geohashgrid.zip -- LICENSE README.md build/d3-es-geohashgrid.js build/d3-es-geohashgrid.min.js"
+  },
+  "devDependencies": {
+    "faucet": "0.0",
+    "rollup": "0.20.5",
+    "rollup-plugin-commonjs": "^1.4.0",
+    "rollup-plugin-npm": "^1.1.0",
+    "tape": "4",
+    "uglify-js": "2"
+  },
+  "dependencies": {
+    "geohash": "0.0.1",
+    "ngeohash": "^0.6.0",
+    "topojson": "^1.6.19"
+  }
+}
