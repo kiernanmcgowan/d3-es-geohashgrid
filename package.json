@@ -18,7 +18,7 @@
   "scripts": {
     "build": "mkdir -p build && node -e 'process.stdout.write(\"var version = \\\"\" + require(\"./package.json\").version + \"\\\"; export * from \\\"../index\\\"; export {version};\");' > build/bundle.js && rollup -c rollup.config.js -f umd -u d3-es-geohashgrid -n d3_es_geohashgrid -o build/d3-es-geohashgrid.js -- build/bundle.js",
     "test": "faucet `find test -name '*-test.js'`",
-    "prepublish": "npm run test && uglifyjs build/d3-es-geohashgrid.js -c -m -o build/d3-es-geohashgrid.min.js && rm -f build/d3-es-geohashgrid.zip && zip -j build/d3-es-geohashgrid.zip -- LICENSE README.md build/d3-es-geohashgrid.js build/d3-es-geohashgrid.min.js"
+    "prepublish": "uglifyjs build/d3-es-geohashgrid.js -c -m -o build/d3-es-geohashgrid.min.js && rm -f build/d3-es-geohashgrid.zip && zip -j build/d3-es-geohashgrid.zip -- LICENSE README.md build/d3-es-geohashgrid.js build/d3-es-geohashgrid.min.js"
   },
   "devDependencies": {
     "faucet": "0.0",
