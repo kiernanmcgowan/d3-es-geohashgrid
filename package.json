@@ -29,7 +29,6 @@
     "uglify-js": "2"
   },
   "dependencies": {
-    "geohash": "0.0.1",
     "ngeohash": "^0.6.0",
     "topojson": "^1.6.19"
   }

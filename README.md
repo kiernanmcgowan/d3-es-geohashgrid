@@ -7,3 +7,8 @@ A reusable d3 chart to display data from an [elasticsearch GeoHash grid Aggregat
 If you use NPM, `npm install d3-es-geo-chart`. Otherwise, download the [latest release](https://github.com/kiernanmcgowan/d3-es-geo-chart/releases/latest).
 
 ## API Reference
+
+
+## License
+
+MIT
