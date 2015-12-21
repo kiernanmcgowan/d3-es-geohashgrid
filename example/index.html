@@ -10,7 +10,11 @@
 }
 
 .land {
-  fill: #222;
+  fill: #000;
+}
+
+svg {
+  background-color: skyblue;
 }
 
 .border {
@@ -19,6 +23,9 @@
   stroke-width: .5px;
 }
 
+.pin {
+  stroke: #fff;
+}
 
 </style>
 <body>
@@ -27,13 +34,28 @@
 <script>
 
 var sample_data = {aggregation: {
-  buckets: [{
-    'key': 'svz',
-    'doc_count': 10964
-  }, {
-    'key': 'sv8',
-    'doc_count': 3198
-  }]
+  buckets: [
+    { key: 'xn76ur', doc_count: 1481 },
+    { key: 'wydmcc', doc_count: 309 },
+    { key: 'dr79fw', doc_count: 242 },
+    { key: '9vk1mf', doc_count: 222 },
+    { key: 'xn0m7m', doc_count: 213 },
+    { key: '9q9k8b', doc_count: 206 },
+    { key: '9qbbe1', doc_count: 193 },
+    { key: '9qc0jp', doc_count: 190 },
+    { key: '9mudn5', doc_count: 189 },
+    { key: 'wydk45', doc_count: 157 },
+    { key: 'ws103f', doc_count: 150 },
+    { key: '9v6kpv', doc_count: 144 },
+    { key: '9q9hr4', doc_count: 135 },
+    { key: 'c23pjn', doc_count: 112 },
+    { key: 'drdk9g', doc_count: 109 },
+    { key: '9mupwc', doc_count: 104 },
+    { key: 'u281z7', doc_count: 98 },
+    { key: 'dp3wj6', doc_count: 97 },
+    { key: 'u09tvm', doc_count: 93 },
+    { key: 'wx4g08', doc_count: 92 }
+  ]
 }};
 
 var width = 960,
@@ -58,7 +80,7 @@ d3.json('./world-50m.json', function(error, topology) {
     .selectAll('.pin')
     .attr('r', 5)
     .style('fill', function(d) {
-      return d.doc_count > 5000 ? 'red' : 'green';
+      return d.doc_count > 130 ? 'orange' : 'green';
     });
 });
 
