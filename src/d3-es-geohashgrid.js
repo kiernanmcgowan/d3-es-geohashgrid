@@ -3,6 +3,10 @@
 import topojson from 'topojson';
 import ngeohash from 'ngeohash';
 
+// import d3_geo_projection from 'd3-geo-projection';
+// import d3_selection from 'd3-selection';
+
+
 export default function() {
 
   var width, height, data, topology,
@@ -14,8 +18,10 @@ export default function() {
     selection.each(function(d, i) {
       var element = d3.select(this);
 
+      var scale = 173 / 1090;
+
       var projection = d3.geo.equirectangular()
-          .scale(153)
+          .scale(scale * width)
           .translate([width / 2, height / 2])
           .precision(0.1);
 
