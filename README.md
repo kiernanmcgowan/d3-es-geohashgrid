@@ -1,5 +1,7 @@
 # d3-es-geohashgrid
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kiernanmcgowan/d3-es-geohashgrid.svg)](https://greenkeeper.io/)
+
 A reusable d3 chart to display data from an [elasticsearch GeoHash grid Aggregation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-geohashgrid-aggregation.html).
 
 ![d3-es-geohashgrid](https://raw.githubusercontent.com/kiernanmcgowan/d3-es-geohashgrid/master/img/example.png)
